@@ -4,13 +4,13 @@
 
 # mongodb-data-api
 
-[![GitHub stars](https://img.shields.io/github/stars/surmon-china/mongodb-data-api.svg?style=for-the-badge)](https://github.com/surmon-china/mongodb-data-api/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/AlexDicy/mongodb-data-api.svg?style=for-the-badge)](https://github.com/AlexDicy/mongodb-data-api/stargazers)
 &nbsp;
-[![npm](https://img.shields.io/npm/v/mongodb-data-api?color=c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/mongodb-data-api)
+[![npm](https://img.shields.io/npm/v/@alexdicy/mongodb-data-api?color=c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/@aledicy/mongodb-data-api)
 &nbsp;
-[![Test Codecov](https://img.shields.io/codecov/c/github/surmon-china/mongodb-data-api?style=for-the-badge)](https://codecov.io/gh/surmon-china/mongodb-data-api)
+[![Test Codecov](https://img.shields.io/codecov/c/github/AlexDicy/mongodb-data-api?style=for-the-badge)](https://codecov.io/gh/AlexDicy/mongodb-data-api)
 &nbsp;
-[![GitHub license](https://img.shields.io/github/license/surmon-china/mongodb-data-api.svg?style=for-the-badge)](/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/AlexDicy/mongodb-data-api.svg?style=for-the-badge)](/LICENSE)
 
 MongoDB Atlas [Data API](https://docs.atlas.mongodb.com/api/data-api/) SDK for Node.js.
 
@@ -19,13 +19,13 @@ MongoDB Atlas [Data API](https://docs.atlas.mongodb.com/api/data-api/) SDK for N
 ### Installation
 
 ```bash
-npm install mongodb-data-api --save
+npm i @alexdicy/mongodb-data-api
 ```
 
 or
 
 ```bash
-yarn add mongodb-data-api
+yarn add @alexdicy/mongodb-data-api
 ```
 
 ### Usage
@@ -33,7 +33,7 @@ yarn add mongodb-data-api
 #### Init
 
 ```ts
-import { createMongoDBDataAPI, Region } from 'mongodb-data-api'
+import { createMongoDBDataAPI, Region } from '@alexdicy/mongodb-data-api'
 
 // init by URL Endpoint
 const api = createMongoDBDataAPI({
