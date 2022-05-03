@@ -2,7 +2,7 @@
   <img src="/logo.png" height="120px" />
 </p>
 
-# mongodb-data-api
+# @alexdicy/mongodb-data-api
 
 [![GitHub stars](https://img.shields.io/github/stars/AlexDicy/mongodb-data-api.svg?style=for-the-badge)](https://github.com/AlexDicy/mongodb-data-api/stargazers)
 &nbsp;
@@ -12,7 +12,7 @@
 &nbsp;
 [![GitHub license](https://img.shields.io/github/license/AlexDicy/mongodb-data-api.svg?style=for-the-badge)](/LICENSE)
 
-MongoDB Atlas [Data API](https://docs.atlas.mongodb.com/api/data-api/) SDK for Node.js.
+MongoDB Atlas [Data API](https://docs.atlas.mongodb.com/api/data-api/) SDK for Node.js and Webworkers environments like Cloudflare Workers.
 
 ---
 
