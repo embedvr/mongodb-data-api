@@ -1,4 +1,3 @@
-import _axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
 import type { Filter, FindOptions, Sort, UpdateFilter, Document } from 'mongodb'
 
 // https://github.com/surmon-china/mongodb-data-api/pull/3/files @maxfi
@@ -33,10 +32,12 @@ const getActionUrl = (endpoint: string, action: string) => {
 }
 
 type ExtendBaseParams<T> = BaseParams & T
+
 interface BaseParams {
   dataSource?: string
   database?: string
   collection?: string
+
   [key: string]: any
 }
 
@@ -47,6 +48,7 @@ interface BaseConfig {
    */
   apiKey: string
 }
+
 interface UrlEndpointConfig extends BaseConfig {
   /**
    * Specific URL Endpoint.
@@ -54,6 +56,7 @@ interface UrlEndpointConfig extends BaseConfig {
    */
   urlEndpoint: string
 }
+
 interface PackEndpointConfig extends BaseConfig {
   /**
    * Specific Data App ID.
@@ -68,16 +71,14 @@ export type Config = XOR<UrlEndpointConfig, PackEndpointConfig>
 export class MongoDBDataAPI<InnerDoc = Document> {
   #config: Config
   #baseParams: BaseParams
-  #axios: AxiosInstance
 
-  constructor(config: Config, baseParams?: BaseParams, axios?: AxiosInstance) {
+  constructor(config: Config, baseParams?: BaseParams) {
     if (!config.apiKey) {
       throw new Error('Invalid API key!')
     }
 
     this.#config = config
     this.#baseParams = baseParams || {}
-    this.#axios = axios || _axios.create()
   }
 
   #newAPI<D>(params: BaseParams) {
@@ -120,8 +121,7 @@ export class MongoDBDataAPI<InnerDoc = Document> {
    */
   public $$action<Result = unknown>(
     name: string,
-    params: BaseParams = {},
-    axiosConfig?: AxiosRequestConfig
+    params: BaseParams = {}
   ): Promise<Result> {
     const mergedParams = {
       ...this.#baseParams,
@@ -134,21 +134,22 @@ export class MongoDBDataAPI<InnerDoc = Document> {
 
     const API_KEY_FIELD = 'api-key'
 
-    return this.#axios({
-      method: 'post',
-      data: JSON.stringify(mergedParams),
-      url: this.#config.urlEndpoint
+    return fetch(
+      this.#config.urlEndpoint
         ? getActionUrl(this.#config.urlEndpoint, name)
         : getActionUrl(getUrlEndpoint(this.#config.appId!, this.#config.region), name),
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Request-Headers': '*',
-        [API_KEY_FIELD]: this.#config.apiKey
-      },
-      ...axiosConfig
-    })
+      {
+        method: 'post',
+        body: JSON.stringify(mergedParams),
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Request-Headers': '*',
+          [API_KEY_FIELD]: this.#config.apiKey
+        }
+      }
+    )
       .then((response) => {
-        return response.data
+        return response.json()
       })
       .catch((error) => {
         // https://docs.atlas.mongodb.com/api/data-api-resources/#error-codes
@@ -292,6 +293,6 @@ export class MongoDBDataAPI<InnerDoc = Document> {
   }
 }
 
-export const createMongoDBDataAPI = (config: Config, axios?: AxiosInstance) => {
-  return new MongoDBDataAPI(config, void 0, axios)
+export const createMongoDBDataAPI = (config: Config) => {
+  return new MongoDBDataAPI(config, void 0)
 }
