@@ -1,5 +1,5 @@
 {
-  "name": "mongodb-data-api",
+  "name": "@alexdicy/mongodb-data-api",
   "version": "0.2.0",
   "description": "MongoDB atlas data API SDK for Node.js",
   "keywords": [
@@ -8,10 +8,10 @@
     "MongoDB Atlas data API SDK"
   ],
   "license": "MIT",
-  "author": "Surmon",
+  "authors": ["Surmon", "AlexDicy"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/surmon-china/mongodb-data-api.git"
+    "url": "https://github.com/AlexDicy/mongodb-data-api.git"
   },
   "files": [
     "dist",
@@ -31,7 +31,9 @@
     "rebirth": "npm run lint && npm run test && npm run build",
     "release": ". ./scripts/release.sh"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mongodb": "^4.5.0"
+  },
   "devDependencies": {
     "@surmon-china/libundler": "^2.2.0",
     "@types/jest": "^27.4.0",
