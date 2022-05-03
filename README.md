@@ -6,7 +6,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/AlexDicy/mongodb-data-api.svg?style=for-the-badge)](https://github.com/AlexDicy/mongodb-data-api/stargazers)
 &nbsp;
-[![npm](https://img.shields.io/npm/v/@alexdicy/mongodb-data-api?color=c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/@aledicy/mongodb-data-api)
+[![npm](https://img.shields.io/npm/v/@alexdicy/mongodb-data-api?color=c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/@alexdicy/mongodb-data-api)
 &nbsp;
 [![Test Codecov](https://img.shields.io/codecov/c/github/AlexDicy/mongodb-data-api?style=for-the-badge)](https://codecov.io/gh/AlexDicy/mongodb-data-api)
 &nbsp;
