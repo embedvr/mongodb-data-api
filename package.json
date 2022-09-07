@@ -1,6 +1,6 @@
 {
   "name": "@embedvr/mongodb-data-api",
-  "version": "2022-09-0702",
+  "version": "0.0.1",
   "description": "MongoDB atlas data API SDK for CF Workers",
   "keywords": [
     "MongoDB data API",
