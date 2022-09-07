@@ -153,9 +153,7 @@ export class MongoDBDataAPI<InnerDoc = Document> {
       })
       .catch((error) => {
         // https://docs.atlas.mongodb.com/api/data-api-resources/#error-codes
-        const errorJSON = error.toJSON()
-        errorJSON.config.headers[API_KEY_FIELD] = '*****'
-        return Promise.reject(error.toJSON())
+        return Promise.reject(error)
       })
   }
 
