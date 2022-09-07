@@ -12,7 +12,8 @@
 &nbsp;
 [![GitHub license](https://img.shields.io/github/license/AlexDicy/mongodb-data-api.svg?style=for-the-badge)](/LICENSE)
 
-MongoDB Atlas [Data API](https://docs.atlas.mongodb.com/api/data-api/) SDK for Node.js and Webworkers environments like Cloudflare Workers.
+MongoDB Atlas [Data API](https://docs.atlas.mongodb.com/api/data-api/) SDK for Node.js and V8 Isolate environments like Cloudflare Workers.
+Includes small bug fixes for small errors.
 
 ---
 
