@@ -1,17 +1,21 @@
 {
-  "name": "@alexdicy/mongodb-data-api",
-  "version": "0.2.0",
-  "description": "MongoDB atlas data API SDK for Node.js",
+  "name": "@embedvr/mongodb-data-api",
+  "version": "2022-09-0702",
+  "description": "MongoDB atlas data API SDK for CF Workers",
   "keywords": [
     "MongoDB data API",
     "MongoDB cloud data API",
     "MongoDB Atlas data API SDK"
   ],
   "license": "MIT",
-  "authors": ["Surmon", "AlexDicy"],
+  "authors": [
+    "Surmon",
+    "AlexDicy",
+    "embed"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexDicy/mongodb-data-api.git"
+    "url": "https://github.com/embedvr/mongodb-data-api.git"
   },
   "files": [
     "dist",
