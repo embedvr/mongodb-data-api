@@ -2,11 +2,11 @@
   <img src="/logo.png" height="120px" />
 </p>
 
-# @alexdicy/mongodb-data-api
+# @embedvr/mongodb-data-api
 
 [![GitHub stars](https://img.shields.io/github/stars/AlexDicy/mongodb-data-api.svg?style=for-the-badge)](https://github.com/AlexDicy/mongodb-data-api/stargazers)
 &nbsp;
-[![npm](https://img.shields.io/npm/v/@alexdicy/mongodb-data-api?color=c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/@alexdicy/mongodb-data-api)
+[![npm](https://img.shields.io/npm/v/@embedvr/mongodb-data-api?color=c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/@embedvr/mongodb-data-api)
 &nbsp;
 [![Test Codecov](https://img.shields.io/codecov/c/github/AlexDicy/mongodb-data-api?style=for-the-badge)](https://codecov.io/gh/AlexDicy/mongodb-data-api)
 &nbsp;
@@ -21,13 +21,13 @@ Fixes a bug with aggregation.
 ### Installation
 
 ```bash
-npm i @alexdicy/mongodb-data-api
+npm i @embedvr/mongodb-data-api
 ```
 
 or
 
 ```bash
-yarn add @alexdicy/mongodb-data-api
+yarn add @embedvr/mongodb-data-api
 ```
 
 ### Usage
@@ -35,7 +35,7 @@ yarn add @alexdicy/mongodb-data-api
 #### Init
 
 ```ts
-import { createMongoDBDataAPI, Region } from '@alexdicy/mongodb-data-api'
+import { createMongoDBDataAPI, Region } from '@embedvr/mongodb-data-api'
 
 // init by URL Endpoint
 const api = createMongoDBDataAPI({
